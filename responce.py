@@ -1,11 +1,10 @@
 import subprocess
-import os
 
-# Create a git repo
-subprocess.run(["git", "init"], cwd=os.getcwd())
+# Add the remote origin
+subprocess.run(["git", "remote", "add", "origin", "https://github.com/mayankjonwal02/GeminiTasker.git"])
 
-# Add all files to the staging area
-subprocess.run(["git", "add", "."], cwd=os.getcwd())
+# Commit any changes
+subprocess.run(["git", "commit", "-am", "Add files"])
 
-# Commit all files to the main branch
-subprocess.run(["git", "commit", "-m", "Initial commit"], cwd=os.getcwd())
+# Push all files
+subprocess.run(["git", "push", "-u", "origin", "main"])
